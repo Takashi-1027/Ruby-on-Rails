@@ -54,16 +54,16 @@
         </p>
       </div>
       <%= image_tag "img/forest.jpg", class:"single-image" %>
+
       <p class="single-text">
-        <!-- body部分 下で変更します -->
         <%= @blog.body %>
-        <!-- body部分 ここまで -->
       </p>
-      <a href="#">編集</a>
-      <a href="#">削除</a>
+        <!-- <a href="#">編集</a> を削除し、以下コードに変更 -->
+      <%= link_to "編集", edit_blog_path(@blog) %>　<!--詳細画面に編集するリンクを追加する-->
+      <%= link_to "削除", blog_path(@blog) %> <!--詳細画面に投稿を削除するリンクを追加する-->
       <div class="author-case">
         <div class="author-image"></div>
-        <div class="author-box">
+          <div class="author-box">
           <p class="author-name">By JOHN SMITH / Photographer</p>
           <p class="author-text">
             His black and white landscapes, often captured at times<br>
